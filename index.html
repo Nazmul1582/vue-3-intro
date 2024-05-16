@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 Intro</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ product }}</h1>
+    </div>
+
+    <!-- import app -->
+    <script src="./main.js"></script>
+    <!-- mount app -->
+    <script>
+        const mountedApp = app.mount("#app")
+    </script>
+</body>
+</html>
