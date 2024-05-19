@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue 3 Intro</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <h1>{{ product }}</h1>
+      <div class="nav-bar"></div>
+
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <!-- <img v-bind:src="image" alt=""> -->
+            <img :src="image" alt="" />
+          </div>
+          <div class="product-info">
+            <h1>{{ product }}</h1>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- import app -->
     <script src="./main.js"></script>
     <!-- mount app -->
     <script>
-        const mountedApp = app.mount("#app")
+      const mountedApp = app.mount("#app");
     </script>
-</body>
+  </body>
 </html>
