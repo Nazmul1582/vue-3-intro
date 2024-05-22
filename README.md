@@ -8,6 +8,7 @@
 - [Attribute Binding](#attribute-binding)
 - [Conditional Rendering](#conditional-rendering)
 - [List Rendering](#list-rendering)
+- [Event Handling](#event-handling)
 
 ### Create a Vue app
 
@@ -176,3 +177,16 @@ Each li will display that array element because in the inner HTML we have writte
 - By saying `:key="variant.id"`, we’re using the shorthand for `v-bind` to the variant’s `id` to the key attribute this gives each DOM element a unique so that Vue can grasp onto the element and not lost track of it as  things update within the app
 
 This provides some performance improvements, and later down the line, if you are doing something like animating your elements. You will find that the `key` attribute really helps Vue effectively manage your elements as they move around the DOM.
+
+
+<hr>
+
+
+### Event Handling
+
+- handling events in Vue using `v-on` directive, shorthand `@`
+- created a click handler for increment cart value and a mouseover for changing the image.
+
+<hr>
+
+
