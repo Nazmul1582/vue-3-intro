@@ -9,6 +9,7 @@
 - [Conditional Rendering](#conditional-rendering)
 - [List Rendering](#list-rendering)
 - [Event Handling](#event-handling)
+- [Class and Style binding](#class-and-style-binding)
 
 ### Create a Vue app
 
@@ -186,6 +187,47 @@ This provides some performance improvements, and later down the line, if you are
 
 - handling events in Vue using `v-on` directive, shorthand `@`
 - created a click handler for increment cart value and a mouseover for changing the image.
+
+<hr>
+
+
+### Class and Style binding
+
+```javascript
+
+// class binding
+<div :class="{activeClass : isActive}"></div>
+
+// class binding: multiple classes
+<div class="circle-color" :class="{className : isActive}"></div>
+
+// class binding: ternary operators
+<div :class="[isActive ? 'isActive' : '']"></div>
+
+// class binding
+<div :class="!inStock ? 'disable-button' : ''"></div>
+
+// Camelcased property name in style object
+<div :style="{backgroundColor: variant.color}"></div>
+
+// kebab-cased property name in style object
+<div :style="{'background-color': variant.color}"></div>
+
+// style binding: object (index.html)
+<div :style="styles"></div>
+// (main.js)
+data(){
+  return{
+    styles: {
+      fontSize: '20px',
+      color: 'red',
+    }
+  }
+}
+
+
+```
+
 
 <hr>
 
