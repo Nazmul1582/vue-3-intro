@@ -10,6 +10,7 @@
 - [List Rendering](#list-rendering)
 - [Event Handling](#event-handling)
 - [Class and Style binding](#class-and-style-binding)
+- [Computed Properties](#computed-properties)
 
 ### Create a Vue app
 
@@ -205,7 +206,7 @@ This provides some performance improvements, and later down the line, if you are
 <div :class="[isActive ? 'isActive' : '']"></div>
 
 // class binding
-<div :class="!inStock ? 'disable-button' : ''"></div>
+<div :class="!inStock ? 'disabledButton' : ''"></div>
 
 // Camelcased property name in style object
 <div :style="{backgroundColor: variant.color}"></div>
@@ -232,3 +233,6 @@ data(){
 <hr>
 
 
+### Computed properties
+
+- Computed property returns a single value. computed properties cache value in a way and only update when needs to, when its dependences changed 
