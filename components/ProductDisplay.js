@@ -58,7 +58,7 @@ app.component( "product-display", {
   },
   methods: {
     addToCart() {
-      this.cart += 1;
+      this.$emit("add-to-cart", "Add to cart button has clicked!")
     },
     updateVariant(index) {
       this.selectedVariant = index;

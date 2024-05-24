@@ -12,6 +12,7 @@
 - [Class and Style binding](#class-and-style-binding)
 - [Computed Properties](#computed-properties)
 - [Components & Props](#components-and-props)
+- [Communicating Events or Emit](#communicating-events-or-emitting-events)
 
 ### Create a Vue app
 
@@ -251,3 +252,10 @@ data(){
 <hr>
 
 
+### Communicating Events or Emitting Events
+
+In Vue.js, the `emit` function is used to communicate from a child component to a parent component.
+
+Emit Events: Tells parent when event happens
+
+<hr>
