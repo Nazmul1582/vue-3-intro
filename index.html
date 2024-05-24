@@ -11,11 +11,11 @@
     <div id="app">
       <div class="nav-bar"></div>
 
-      <div class="cart">cart({{ cart }})</div>
+      <div class="cart">cart({{ cart.length }})</div>
 
       <product-display
         :premium="premium"
-        @add-to-cart="updateEmit"
+        @add-to-cart="updateCart"
       ></product-display>
       <product-display></product-display>
       <product-display></product-display>
