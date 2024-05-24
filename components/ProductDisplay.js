@@ -32,6 +32,8 @@ app.component("product-display", {
             <button :disabled="!inStock" class="button" :class="{disabledButton : !inStock}" v-on:click="addToCart">Add To Cart</button>
           </div>
         </div>
+        <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+        <review-form @review-submitted="addReview" />
       </div>
     `,
   data() {
@@ -54,6 +56,7 @@ app.component("product-display", {
           quantity: 0,
         },
       ],
+      reviews: []
     };
   },
   methods: {
@@ -63,6 +66,9 @@ app.component("product-display", {
     updateVariant(index) {
       this.selectedVariant = index;
     },
+    addReview(review) {
+      this.reviews.push(review)
+    }
   },
   computed: {
     title() {
