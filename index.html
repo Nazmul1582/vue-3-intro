@@ -13,34 +13,15 @@
 
       <div class="cart">cart({{ cart }})</div>
 
-      <div class="product-display">
-        <div class="product-container">
-          <div class="product-image">
-            <!-- <img v-bind:src="image" alt=""> -->
-            <img :class="!inStock ? 'out-of-stock-img' : ''" :src="image" alt="" />
-          </div>
-          <div class="product-info">
-            <h1>{{ title }}</h1>
-            <p v-if="inStock">In Stock</p>
-            <p v-else>Out of Stock</p>
-            <ul>
-              <li v-for="detail in details">{{ detail }}</li>
-            </ul>
-            <div
-              @mouseover="updateVariant(index)"
-              v-for="(variant, index) in variants"
-              class="color-circle"
-              :style="{backgroundColor: variant.color}"
-            >
-            </div>
-            <button :disabled="!inStock" class="button" :class="{disabledButton : !inStock}" v-on:click="addToCart">Add To Cart</button>
-          </div>
-        </div>
-      </div>
+      <product-display :premium="premium"></product-display>      
+      <product-display></product-display>      
+      <product-display></product-display>      
     </div>
 
     <!-- import app -->
     <script src="./main.js"></script>
+    <!-- import components -->
+    <script src="./components/ProductDisplay.js"></script>
     <!-- mount app -->
     <script>
       const mountedApp = app.mount("#app");

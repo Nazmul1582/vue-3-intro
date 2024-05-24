@@ -11,6 +11,7 @@
 - [Event Handling](#event-handling)
 - [Class and Style binding](#class-and-style-binding)
 - [Computed Properties](#computed-properties)
+- [Components & Props](#components-and-props)
 
 ### Create a Vue app
 
@@ -236,3 +237,17 @@ data(){
 ### Computed properties
 
 - Computed property returns a single value. computed properties cache value in a way and only update when needs to, when its dependences changed 
+
+
+<hr>
+
+
+### Components and Props
+
+- Components: building blocks of a Vue app.
+- Props: A custom attribute for passing data into a component
+
+
+<hr>
+
+
