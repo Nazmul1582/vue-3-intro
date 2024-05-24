@@ -13,9 +13,12 @@
 
       <div class="cart">cart({{ cart }})</div>
 
-      <product-display :premium="premium" @add-to-cart="updateCart"></product-display>      
-      <product-display></product-display>      
-      <product-display></product-display>      
+      <product-display
+        :premium="premium"
+        @add-to-cart="updateEmit"
+      ></product-display>
+      <product-display></product-display>
+      <product-display></product-display>
     </div>
 
     <!-- import app -->

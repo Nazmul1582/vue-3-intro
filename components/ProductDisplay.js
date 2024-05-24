@@ -1,9 +1,9 @@
-app.component( "product-display", {
+app.component("product-display", {
   props: {
     premium: {
       type: Boolean,
       required: false,
-    }
+    },
   },
   template:
     /*html*/
@@ -58,7 +58,7 @@ app.component( "product-display", {
   },
   methods: {
     addToCart() {
-      this.$emit("add-to-cart", "Add to cart button has clicked!")
+      this.$emit("add-to-cart");
     },
     updateVariant(index) {
       this.selectedVariant = index;
@@ -74,11 +74,11 @@ app.component( "product-display", {
     inStock() {
       return this.variants[this.selectedVariant].quantity;
     },
-    shipping(){
-      if(this.premium){
-        return "Free"
+    shipping() {
+      if (this.premium) {
+        return "Free";
       }
-      return "$2.99"
-    }
+      return "$2.99";
+    },
   },
 });

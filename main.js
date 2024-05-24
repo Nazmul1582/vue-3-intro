@@ -6,8 +6,8 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    updateCart(msg){
-      alert(msg);
-    }
-  }
+    updateEmit() {
+      this.cart += 1;
+    },
+  },
 });
