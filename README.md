@@ -13,6 +13,7 @@
 - [Computed Properties](#computed-properties)
 - [Components & Props](#components-and-props)
 - [Communicating Events or Emit](#communicating-events-or-emitting-events)
+- [Forms & v-model](#forms-and-v-model)
 
 ### Create a Vue app
 
@@ -259,3 +260,23 @@ In Vue.js, the `emit` function is used to communicate from a child component to 
 Emit Events: Tells parent when event happens
 
 <hr>
+
+
+### Forms and v-model
+
+- `v-model` is a directive in Vue.js that creates a two-way binding on form elements, meaning any changes to the input are immediately reflected in the data and vice versa.
+
+- In Vue.js, `v-model`.number is a modifier that you can use with the `v-model` directive to automatically convert the input value to a number. This is particularly useful when you're dealing with numeric inputs and you want to ensure the data type is consistent.
+
+- In Vue.js, the `v-model` directive has three main modifiers that you can use to modify its behavior. These modifiers are:
+
+1. lazy
+2. number
+3. trim
+
+- In Vue.js, the `@submit.prevent` directive is a shorthand for adding an event listener to a form's submit event and preventing the default form submission behavior. 
+
+The @submit.prevent directive consists of:
+
+- `@submit`: This is an event listener for the form's submit event.
+- `.prevent`: This is a modifier that calls `event.preventDefault()`, which prevents the default action of the form submission.
